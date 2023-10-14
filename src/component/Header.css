@@ -1,0 +1,98 @@
+.header-container {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.header {
+    flex: 1;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header.menu-open {
+    transform: translateX(-30%);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 0.25rem 0.5rem;
+    margin-top: 1rem;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    max-width: fit-content;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.avatar-icon>svg {
+    margin-right: 0.5rem;
+}
+
+.login-message {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.5rem;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+    .search-bar {
+        padding: 0.15rem 0.3rem;
+        margin-top: 0.5rem;
+    }
+}
